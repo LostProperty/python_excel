@@ -9,11 +9,20 @@ TITLE_CHOICES = (
 )
 
 class Job(models.Model):
-    title = models.CharField(max_length=20, choices=TITLE_CHOICES)
+    title = models.CharField(max_length=20)
+
+    def __unicode__(self):
+        return self.title
 
 
 class Staff(models.Model):
-    title = models.CharField(max_length=3, choices=TITLE_CHOICES) # null=False
+    title = models.CharField(max_length=3, choices=TITLE_CHOICES)
     first_name = models.CharField(max_length=20)
     surname = models.CharField(max_length=20)
     job = models.ForeignKey('Job')
+
+    def __unicode__(self):
+        return '{0} {1} {2}'.format(self.title, self.first_name, self.surname)
+
+    class Meta:
+        verbose_name_plural = 'staff'

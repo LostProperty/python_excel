@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
             name='Job',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('title', models.CharField(max_length=20, choices=[(b'Mr', b'Mr'), (b'Ms', b'Ms'), (b'Miss', b'Miss'), (b'Mrs', b'Mrs')])),
+                ('title', models.CharField(max_length=20)),
             ],
             options={
             },
@@ -30,6 +30,7 @@ class Migration(migrations.Migration):
                 ('job', models.ForeignKey(to='staff.Job')),
             ],
             options={
+                'verbose_name_plural': 'staff',
             },
             bases=(models.Model,),
         ),
