@@ -23,7 +23,7 @@ class Command(BaseCommand):
         worksheet.write(0, 3, 'Job')
 
         input_rows = 10
-        title_list = ['Mr', 'Miss', 'Mrs']
+        title_list = ['Mr', 'Ms', 'Miss', 'Mrs']
         worksheet.data_validation(1, 0, input_rows, 0,
             {'validate': 'list',
             'input_title': 'Select value',
