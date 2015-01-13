@@ -38,3 +38,5 @@ python manage.py generate_excel_file
 cd python_excel
 python manage.py import_excel_file staff_populated.xlsx
 ```
+
+Start the server with `python manage.py runserver` you can then go to http://127.0.0.1:8000/admin/staff/staff/ login and you should see the newly created users.
