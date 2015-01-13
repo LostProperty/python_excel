@@ -22,7 +22,7 @@ class Staff(models.Model):
     job = models.ForeignKey('Job')
 
     def __unicode__(self):
-        return '{0} {1} {2}'.format(self.title, self.first_name, self.surname)
+        return '{0}. {1} {2}'.format(self.title, self.first_name, self.surname)
 
     class Meta:
         verbose_name_plural = 'staff'

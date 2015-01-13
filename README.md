@@ -18,6 +18,8 @@ cd python_excel
 python manage.py migrate
 ```
 
+I've added a data migration to populate the job titles and one member of staff.
+
 ### Create Super user for Admin
 ```
 cd python_excel

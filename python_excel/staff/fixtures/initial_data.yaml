@@ -1,0 +1,12 @@
+-   fields: {title: Developer}
+    model: staff.job
+    pk: 4
+-   fields: {title: Designer}
+    model: staff.job
+    pk: 5
+-   fields: {title: Project Manager}
+    model: staff.job
+    pk: 6
+-   fields: {first_name: Pete, job: 4, surname: Graham, title: Mr}
+    model: staff.staff
+    pk: 2
